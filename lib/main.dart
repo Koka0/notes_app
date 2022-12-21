@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:news_app/views/notes_view.dart';
 
-
-import 'home_page.dart';
 
 
 void main() {
@@ -15,8 +14,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(appBarTheme: const AppBarTheme(color: Colors.white)),
-      home: const HomePage(),
+      theme: ThemeData(
+        brightness: Brightness.dark
+      ),
+      home: const NotesView(),
     );
   }}
 
