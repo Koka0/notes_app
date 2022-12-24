@@ -6,8 +6,8 @@ class CustomIconBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 55,
-      width: 55,
+      height: 50,
+      width: 50,
       decoration: BoxDecoration(
         color: Colors.grey.withOpacity(0.5),
         borderRadius: BorderRadius.circular(15),
@@ -18,7 +18,7 @@ class CustomIconBar extends StatelessWidget {
         },
         icon: const Icon(
           Icons.search,
-          size: 35,
+          size: 30,
         ),
       ),
     );

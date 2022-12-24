@@ -13,7 +13,7 @@ class CustomAppBar extends StatelessWidget {
       children: const [
         Text(
           'Notes',
-          style: TextStyle(fontSize: 28),
+          style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
         ),
         CustomIconBar(),
       ],
