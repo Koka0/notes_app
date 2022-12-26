@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/constants.dart';
+import 'package:news_app/color/constants.dart';
 
 class AddCustomTextField extends StatelessWidget {
-  const AddCustomTextField({Key? key}) : super(key: key);
+  final String hint;
+  final int maxLine;
+
+  const AddCustomTextField({Key? key, required this.hint, this.maxLine = 1})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      cursorColor: KprimaryColor,
+      maxLines: maxLine,
       decoration: InputDecoration(
-        hintText: 'Title',
-        hintStyle: const TextStyle(color: KprimaryColor),
-        border: buildInputBorder(),
-        enabledBorder: buildInputBorder(),
-      ),
+          hintText: hint,
+          hintStyle: const TextStyle(color: KprimaryColor),
+          border: buildInputBorder(),
+          enabledBorder: buildInputBorder(),
+          focusedBorder: buildInputBorder(KprimaryColor)),
     );
   }
 
