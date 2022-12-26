@@ -19,18 +19,18 @@ class NoteItem extends StatelessWidget {
             title: const Padding(
               padding: EdgeInsets.only(bottom: 5),
               child: Text(
-                'Flutter',
+                'Lorem Ipsum',
                 style: TextStyle(
                   color: Colors.black,
-                  fontSize: 28,
+                  fontSize: 27,
                   fontWeight: FontWeight.w500,
                 ),
               ),
             ),
             subtitle: Text(
-              'Start to build your career with Nordin',
+              'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
               style:
-                  TextStyle(color: Colors.black.withOpacity(.5), fontSize: 18),
+                  TextStyle(color: Colors.black.withOpacity(.5), fontSize: 16),
             ),
             trailing: IconButton(
               onPressed: () {},

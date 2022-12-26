@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:news_app/views/notes_view.dart';
-
-
 
 void main() {
   runApp(const MyApp());
@@ -15,10 +14,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        brightness: Brightness.dark
-      ),
+          textTheme: GoogleFonts.poppinsTextTheme(Typography.whiteCupertino),
+          brightness: Brightness.dark),
       home: const NotesView(),
     );
-  }}
-
-
+  }
+}
