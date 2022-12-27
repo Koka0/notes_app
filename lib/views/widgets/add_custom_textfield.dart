@@ -11,6 +11,9 @@ class AddCustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      textInputAction: TextInputAction.next,
+      keyboardType: TextInputType.name,
+      cursorColor: KprimaryColor,
       maxLines: maxLine,
       decoration: InputDecoration(
           hintText: hint,
