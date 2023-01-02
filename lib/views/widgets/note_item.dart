@@ -1,8 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/views/widgets/edit_note_view_body.dart';
+import 'package:hive/hive.dart';
+import 'edit_note_view_body.dart';
 
-class NoteItem extends StatelessWidget {
+class NoteItem extends StatefulWidget {
   const NoteItem({Key? key}) : super(key: key);
+
+  @override
+  State<NoteItem> createState() => _NoteItemState();
+}
+
+class _NoteItemState extends State<NoteItem> {
+  List<Map<String, dynamic>> _items = [];
+  final _noteBox = Hive.box('noteBox');
+
+  //
+  // Create new Item
+  Future<void> _createItem(Map<String, dynamic> newItem) async {
+    await _noteBox.add(newItem);
+    print('amount data is ${_noteBox.length}');
+  }
 
   @override
   Widget build(BuildContext context) {

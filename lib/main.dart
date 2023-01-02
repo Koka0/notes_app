@@ -1,8 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:news_app/views/notes_view.dart';
+import 'package:hive/hive.dart';
+import 'package:hive_flutter/adapters.dart';
+import 'package:note_app/model/note_model.dart';
+import 'package:note_app/views/notes_view.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  //initialize Hive
+  //
+  await Hive.initFlutter();
+  Hive.registerAdapter(NoteModelAdapter());
+
+  // open the Box
+  //
+  await Hive.openBox('noteBox');
+
   runApp(const MyApp());
 }
 
